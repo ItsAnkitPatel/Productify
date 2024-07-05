@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import ProtectRoutes from "./components/ProtectRoutes";
 import Layout from "./Layout";
 import RedirectRoute from "./components/RedirectRoute";
+import CatchAllRoutes from "./components/CatchAllRoutes";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,8 @@ const router = createBrowserRouter(
           </>
         }
       />
+      {/* Catch all routes which is not explicity defined */}
+      <Route path="*" element={<CatchAllRoutes />} />
     </Route>,
   ),
 );
