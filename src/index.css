@@ -1,0 +1,9 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: whitesmoke;
+  font-family: "Recursive", sans-serif;
+}
