@@ -2,6 +2,11 @@
 
 This is an assignment project given by a company. The project is a simple web application that allows users to create, read, update, and delete products with Login functionality. The data is stored in the local storage of the browser.
 
+
+
+https://github.com/ItsAnkitPatel/Productify/assets/163109788/d9cf22b1-975b-422c-9335-5ab966600cc0
+
+
 ## Technologies
 
 - React.js
@@ -35,4 +40,6 @@ This is an assignment project given by a company. The project is a simple web ap
 <br>
 
 > Not so important: It took me around 11 to 12 hours to complete this project.
+
+<img src="https://github.com/ItsAnkitPatel/Productify/assets/163109788/5c91b1b7-532b-45a9-81d7-fddfdc3d6146" width=800  alt="Project time spend"/>
 
