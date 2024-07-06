@@ -5,9 +5,10 @@ import { sampleProducts } from "../../utils/productSampleData";
 import ButtonStyle from "../ButtonStyle";
 
 const AllProducts = () => {
-  const { products, setProducts } = useProductStore();
+  const { products, setProducts, setAddProductVisibility } = useProductStore();
 
-  // Loading products from local storage if available
+  // Loading products from local storage if available 
+  // and if not available then load sample data
   useEffect(() => {
     let products = JSON.parse(localStorage.getItem("products"));
     if (!products) products = sampleProducts;
@@ -41,7 +42,7 @@ const AllProducts = () => {
         <div
           // Setting index as key because some products might have same name
           key={index}
-          className="w-full rounded-md bg-gray-200 px-2 py-3 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+          className="w-full rounded-md bg-gray-200 p-3 shadow-lg transition-shadow duration-300 hover:shadow-xl"
         >
           <div className="flex items-center justify-between">
             <p>{product.name}</p>
@@ -63,14 +64,23 @@ const AllProducts = () => {
     <div className="my-2 w-full space-y-5 px-2 py-5">
       <div className="flex justify-end">
         <div className="space-y-2">
-          <button
-            onClick={() => setProducts([])}
-            className="w-full text-right text-gray-500 underline-offset-2 hover:underline"
-          >
-            Delete All
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              className="text-nowrap text-gray-500 underline-offset-2 hover:underline"
+              onClick={() => setAddProductVisibility(true)}
+            >
+              Add Product
+            </button>
+            <div>|</div>
+            <button
+              onClick={() => setProducts([])}
+              className="w-full text-nowrap text-gray-500 underline-offset-2 hover:underline"
+            >
+              Delete All
+            </button>
+          </div>
           <ButtonStyle
-            className="w-fit px-2 py-3 text-sm"
+            className="w-full px-2 py-3 text-sm"
             onClick={resetProductToSampleData}
           >
             Reset to Sample Data

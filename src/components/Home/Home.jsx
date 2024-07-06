@@ -4,11 +4,19 @@ import { cn } from "../../utils/cn";
 import AllProducts from "./AllProducts";
 import { debounce } from "lodash";
 import { Loader2Icon } from "lucide-react";
+import AddProduct from "./AddProduct";
 
 const Home = () => {
   const [enableOverlay, setEnableOverlay] = useState(false);
-  const { products } = useProductStore();
-  // This is for handling the overlay when clicking outside the search bar
+  const { products, addProductVisibility } = useProductStore();
+
+  // This will used for the loader when searching for products in the search bar
+  const [loader, setLoader] = useState(false);
+
+  // This will set "No Products Found" message
+  const [showNotFound, setShowNotFound] = useState(false);
+
+  // This is for toggling the overlay when clicking outside the search bar
   const searchBarRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(event) {
@@ -27,12 +35,6 @@ const Home = () => {
   }, [enableOverlay]);
 
   const [showSearchedProducts, setShowSearchedProducts] = useState([]);
-
-  // This will used for the loader when searching for products in the search bar
-  const [loader, setLoader] = useState(false);
-
-  // This will set "No Products Found" message
-  const [showNotFound, setShowNotFound] = useState(false);
 
   // Used debounce to avoid multiple searching
   const handleSearch = debounce((e) => {
@@ -57,6 +59,9 @@ const Home = () => {
   }, 700);
   return (
     <>
+      {/* Toggle Addproduct component  */}
+      {addProductVisibility && <AddProduct />}
+
       {/* Overlay */}
       <div
         className={cn(
@@ -104,7 +109,7 @@ const Home = () => {
                 <div
                   // Setting index as key because some products might have same name
                   key={index}
-                  className="w-5/12 rounded-md bg-white px-2 py-3 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+                  className="w-5/12 rounded-md bg-white px-4 py-3 shadow-lg transition-shadow duration-300 hover:shadow-xl"
                 >
                   <div className="flex items-center justify-between">
                     <p>{product.name}</p>
