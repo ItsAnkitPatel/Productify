@@ -43,8 +43,4 @@ export const sampleProducts = [
     name: "Product 4",
     price: "$240",
   },
-  {
-    name: "Product 5",
-    price: "$350",
-  },
 ];
