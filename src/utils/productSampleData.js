@@ -20,12 +20,12 @@ export const sampleProducts = [
     price: "$170",
   },
   {
-    name:"Sony Headphones",
-    price:"$200",
+    name: "Sony Headphones",
+    price: "$200",
   },
   {
-    name:"Samsung Galaxy",
-    price:"$300",
+    name: "Samsung Galaxy",
+    price: "$300",
   },
   {
     name: "Product 1",
@@ -42,18 +42,6 @@ export const sampleProducts = [
   {
     name: "Product 4",
     price: "$240",
-  },
-  {
-    name: "Product 5",
-    price: "$350",
-  },
-  {
-    name: "Product 5",
-    price: "$350",
-  },
-  {
-    name: "Product 5",
-    price: "$350",
   },
   {
     name: "Product 5",
