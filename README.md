@@ -29,6 +29,7 @@ This is an assignment project given by a company. The project is a simple web ap
   - Also you can delete all the products at once by clicking on the `Delete All` button present on the home page.
   - You can load the sample data by clicking on the `Reset to Sample Data` button.
   - Search functionality is present to search the products by name.
+  - All products are added in the local storage of the browser. So if user revisits the application, the data is still there.
 
 <br>
 <br>
