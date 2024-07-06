@@ -27,18 +27,20 @@ const AddProduct = () => {
       products.unshift({ name: newProduct, price: `$${price}` });
       localStorage.setItem("products", JSON.stringify(products));
       console.log("New Product");
-      setAddProductVisibility(false)
+      setAddProductVisibility(false);
     }
     console.log("submit");
   };
 
   return (
-    <div className="absolute z-30 h-full w-full backdrop-blur-sm ">
+    <div className="absolute z-30 h-full w-full backdrop-blur-sm">
       {/* Positing the container in center of the page */}
       <div className="flex min-h-96 w-9/12 flex-col items-center justify-center transition-all duration-700">
         <div className="w-full drop-shadow-lg">
-          <div className="mx-auto w-full overflow-hidden rounded-md bg-transparent p-2 px-5 shadow-lg transition-all duration-700 sm:w-96">
-            <h1 className="mb-2 mt-5 text-3xl drop-shadow-none">Add Product</h1>
+          <div className="mx-auto w-full overflow-hidden rounded-md bg-transparent p-2 px-5 shadow-xl shadow-gray-500/80 transition-all duration-700 sm:w-96 lg:mt-28">
+            <h1 className="mb-2 mt-5 text-3xl drop-shadow-none">
+              Add Your Product
+            </h1>
 
             <form onSubmit={handleSubmit}>
               <div className="flex flex-col gap-5">
@@ -65,17 +67,17 @@ const AddProduct = () => {
                   }}
                 />
 
-                <div className="mb-3 flex w-full justify-between">
+                <div className="mb-3 mt-2 flex w-full justify-between">
                   <div className="flex w-full items-center justify-between px-px text-lg">
                     <button
-                      className="rounded-md bg-white p-2 transition-transform duration-300 active:translate-y-2"
+                      className="rounded-md bg-white px-3 py-2 text-black transition-all duration-300 hover:shadow-lg active:translate-y-2"
                       onClick={handleCancel}
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
-                      className="text-nowrap rounded-md bg-black p-2 text-white transition-transform duration-300 active:translate-y-2"
+                      className="text-nowrap rounded-md bg-black px-3 py-2 text-white transition-all duration-300 hover:shadow-lg hover:brightness-110 active:translate-y-2"
                     >
                       Add Product
                     </button>

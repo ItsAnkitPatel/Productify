@@ -7,11 +7,11 @@ const Hero = () => {
         Welcome to <span className="text-zinc-500">Productify</span>
       </h1>
 
-      <p className="mt-4 text-base text-center md:text-xl lg:text-2xl transition-all duration-700">
+      <p className="mt-4 text-center text-base transition-all duration-700 md:text-xl lg:text-2xl">
         The best place to manage your products
       </p>
 
-      <span className="mt-6 text-sm md:text-base text-center text-zinc-500 transition-all duration-700 capitalize">
+      <span className="mt-6 text-center text-sm capitalize text-zinc-500 transition-all duration-700 md:text-base">
         Please{" "}
         <Link
           to={"/login"}
