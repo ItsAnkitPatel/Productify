@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { useProductStore } from "../store/useProductStore";
-import { cn } from "../utils/cn";
+import { useProductStore } from "../../store/useProductStore";
+import { cn } from "../../utils/cn";
 import AllProducts from "./AllProducts";
 import { debounce } from "lodash";
 import { Loader2Icon } from "lucide-react";

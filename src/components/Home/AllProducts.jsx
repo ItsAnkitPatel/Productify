@@ -1,8 +1,8 @@
 import { Trash2Icon } from "lucide-react";
 import { useEffect } from "react";
-import { useProductStore } from "../store/useProductStore";
-import { sampleProducts } from "../utils/productSampleData";
-import ButtonStyle from "./ButtonStyle";
+import { useProductStore } from "../../store/useProductStore";
+import { sampleProducts } from "../../utils/productSampleData";
+import ButtonStyle from "../ButtonStyle";
 
 const AllProducts = () => {
   const { products, setProducts } = useProductStore();
