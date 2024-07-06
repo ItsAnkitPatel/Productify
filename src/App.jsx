@@ -6,7 +6,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import ProtectRoutes from "./components/ProtectRoutes";
 import Layout from "./Layout";
 import RedirectRoute from "./components/RedirectRoute";
