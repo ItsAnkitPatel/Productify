@@ -26,10 +26,9 @@ const AddProduct = () => {
     } else {
       products.unshift({ name: newProduct, price: `$${price}` });
       localStorage.setItem("products", JSON.stringify(products));
-      console.log("New Product");
+      toast.success("Product added successfully");
       setAddProductVisibility(false);
     }
-    console.log("submit");
   };
 
   return (
