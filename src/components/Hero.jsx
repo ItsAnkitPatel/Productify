@@ -11,7 +11,7 @@ const Hero = () => {
         The best place to manage your products
       </p>
 
-      <span className="mt-6 text-sm md:text-base text-center text-zinc-500 transition-all duration-700">
+      <span className="mt-6 text-sm md:text-base text-center text-zinc-500 transition-all duration-700 capitalize">
         Please{" "}
         <Link
           to={"/login"}
