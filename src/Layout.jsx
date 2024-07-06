@@ -9,7 +9,7 @@ function Layout() {
   return (
     <>
       <MaxWidthWrapper>
-        <ToastContainer autoClose={2000} stacked />
+        <ToastContainer autoClose={2000} position="top-center" stacked />
         <Navbar />
         <Outlet />
       </MaxWidthWrapper>

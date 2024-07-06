@@ -11,11 +11,13 @@ import ProtectRoutes from "./components/ProtectRoutes";
 import Layout from "./Layout";
 import RedirectRoute from "./components/RedirectRoute";
 import CatchAllRoutes from "./components/CatchAllRoutes";
+import Hero from "./components/Hero";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       {/* If the user is not logged in then do not let them access home page instead redirect them to login page */}
+      <Route path="" element={<Hero />} />
       <Route path="/" element={<ProtectRoutes />}>
         <Route path="/home" element={<Home />} />
       </Route>
